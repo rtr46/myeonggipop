@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "meikipop"
-version = "2.0.5"
-description = "Universal Japanese OCR popup dictionary"
+name = "myeonggipop"
+version = "2.1.0"
+description = "Universal Korean OCR popup dictionary"
 readme = "README.md"
 license = "GPL-3.0"
 authors = [
@@ -21,27 +21,25 @@ dependencies = [
     "betterproto>=2.0.0b7",
     "protobuf>=6.33.1",
     "websockets>=15.0.1",
-    "meikiocr>=0.3.5",
-    "onnxruntime==1.20.1; sys_platform == 'win32'",
     "keyboard~=0.13.5; sys_platform == 'win32'",
     "python-xlib~=0.33; sys_platform == 'linux'",
     "pyobjc-framework-Quartz>=10.0; sys_platform == 'darwin'",
     "pyobjc-framework-Cocoa>=10.0; sys_platform == 'darwin'",
-    "lxml",
     "platformdirs",
 ]
 
 [project.scripts]
-meikipop = "meikipop.main:main"
+myeonggipop = "myeonggipop.main:main"
 
-[project.entry-points."meikipop.scripts"]
-build-dict = "meikipop.scripts.build_dictionary:main"
-import-yomitan-dict-html = "meikipop.scripts.import_yomitan_dict_html:main"
-import-yomitan-dict-text = "meikipop.scripts.import_yomitan_dict_text:main"
+[project.entry-points."myeonggipop.scripts"]
+build-dict = "myeonggipop.scripts.build_dictionary:main"
+build-korean-deconjugator = "myeonggipop.scripts.build_korean_deconjugator:main"
+import-yomitan-dict-html = "myeonggipop.scripts.import_yomitan_dict_html:main"
+import-yomitan-dict-text = "myeonggipop.scripts.import_yomitan_dict_text:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["meikipop*"]
+include = ["myeonggipop*"]
 
 [tool.setuptools.package-data]
-meikipop = ["scripts/deconjugator.json", "resources/icon.ico", "resources/icon.inactive.ico"]
+myeonggipop = ["scripts/deconjugator_ko.json", "resources/icon.ico", "resources/icon.inactive.ico"]

@@ -1,10 +1,11 @@
-id: com.github.rtr46.meikipop
+# TODO: replace with your own reverse-DNS id when publishing.
+id: org.myeonggipop.myeonggipop
 runtime: org.kde.Platform
 runtime-version: "6.10"
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
 base-version: "6.10"
-command: "meikipop"
+command: "myeonggipop"
 finish-args:
   - "--socket=x11"
   - "--socket=wayland"
@@ -12,9 +13,9 @@ finish-args:
   - "--share=ipc"
   - "--share=network"
   - --talk-name=org.kde.StatusNotifierWatcher
-  - "--filesystem=xdg-config/meikipop:rw"
+  - "--filesystem=xdg-config/myeonggipop:rw"
   - "--filesystem=xdg-config/screen_ai:rw"
-  - "--filesystem=xdg-data/meikipop:rw"
+  - "--filesystem=xdg-data/myeonggipop:rw"
 modules:
   - name: pycairo
     buildsystem: meson
@@ -29,20 +30,20 @@ modules:
         url: https://download.gnome.org/sources/pygobject/3.56/pygobject-3.56.1.tar.gz
         sha256: 2ec1cc8c55c7ffeebb97e58a9bba7aa1e74611f1173628084685446804a8881a
   - python3-deps.json
-  - name: meikipop
+  - name: myeonggipop
     buildsystem: simple
     build-commands:
       - |
         python3 - << 'EOF'
         from PIL import Image
-        img = Image.open("src/meikipop/resources/icon.ico")
+        img = Image.open("src/myeonggipop/resources/icon.ico")
         img.save("icon.png")
         EOF
       - pip3 install --no-index --find-links=. --prefix=/app --no-build-isolation
         --no-deps .
-      - install -Dm644 flatpak/meikipop.desktop /app/share/applications/com.github.rtr46.meikipop.desktop
-      - install -Dm644 flatpak/metainfo.xml /app/share/metainfo/com.github.rtr46.meikipop.metainfo.xml
-      - install -Dm644 icon.png /app/share/icons/hicolor/256x256/apps/com.github.rtr46.meikipop.png
+      - install -Dm644 flatpak/myeonggipop.desktop /app/share/applications/org.myeonggipop.myeonggipop.desktop
+      - install -Dm644 flatpak/metainfo.xml /app/share/metainfo/org.myeonggipop.myeonggipop.metainfo.xml
+      - install -Dm644 icon.png /app/share/icons/hicolor/256x256/apps/org.myeonggipop.myeonggipop.png
     sources:
       - type: dir
         path: ..

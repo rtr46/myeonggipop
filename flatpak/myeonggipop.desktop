@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Myeonggipop
+Comment=Korean OCR Popup Dictionary
+Exec=myeonggipop
+Icon=org.myeonggipop.myeonggipop
+Terminal=false
+Type=Application
+Categories=Education;Languages;Utility;
+Keywords=Korean;OCR;Dictionary;Popup;
