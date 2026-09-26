@@ -1,3 +1,6 @@
+
+
+
 # myeonggipop - Korean OCR popup dictionary
 
 > ⚠️ **Honest warning:** this is an experimental, AI-assisted fork. It works,
@@ -8,6 +11,8 @@ myeonggipop is a fork of [meikipop](https://github.com/rtr46/meikipop)
 retargeted from Japanese to **Korean**: point at Korean text anywhere on
 your screen (games, videos, websites) and get instant dictionary lookups
 with verb/adjective deinflection, Hanja and grammar explanations.
+
+https://github.com/user-attachments/assets/7847daa8-9770-42d5-8f2c-35958e38d9f5
 
 ## Install & run
 
