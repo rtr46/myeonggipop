@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment folders
+venv/
+.venv/
+env/
+.env
+
+# Build artifacts
+dist/
+build/
+
+# IDE folders
+.vscode/
+.idea/
+
+# Local project/user files
+data/
+config.ini
+dictionary.pkl
+
+# MacOS things
+.DS_Store
+
+src/meikipop.egg-info/
+
+# Flatpak
+bundle-repo
+**.flatpak
+python3-deps.json
